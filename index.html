@@ -14,13 +14,25 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 
-<body>
-    <div class="numbers d-flex justify-content-center my-5"></div>
+<body class="bg-secondary">
 
-    <div class="timer"></div>
+    <div class="container d-flex align-items-center justify-content-center vh-100 text-align-center flex-column">
+        <div class="numbers"></div>
+        <div class="inputs_container flex-column">
+            <input type="number" class="my-2 input-number" />
+            <input type="number" class="my-2 input-number" />
+            <input type="number" class="my-2 input-number" />
+            <input type="number" class="my-2 input-number" />
+            <input type="number" class="my-2 input-number" />
+            <button class="btn btn-primary my-2">Verifica</button>
+        </div>
+        <div class="timer"></div>
+    </div>
 
 
     <script src="./script.js"></script>
 </body>
 
 </html>
+
+
