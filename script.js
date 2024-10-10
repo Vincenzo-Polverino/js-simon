@@ -12,7 +12,7 @@ for (let i = 0; i < 5; i++) {
     numbers.push(Math.floor((Math.random() * 5) + 1));
 }
 
-numberEl.innerHTML = `<h1>${numbers.join(' ')}</h1>`;
+numberEl.innerHTML = `<h1>${numbers.join(' - ')}</h1>`;
 
 let time_left = 30;
 timerEl.innerHTML = `<h1>${time_left}</h1>`;
@@ -43,9 +43,11 @@ checkEl.addEventListener('click', function() {
             correct_numbers.push(numbers[i]);
         }
     }
-
-    let message = `Hai indovinato ${correct_numbers.length} numeri: ${correct_numbers.join(', ')}.`;
+    inputs_containerEl.style.display = 'none';
+    let message = `Hai indovinato ${correct_numbers.length} numeri` 
+    let guessed = `${correct_numbers.join(' - ')}`;
    
-
+    document.querySelector('.guessed').innerHTML =  `<h2>${guessed}</h2>`;
     document.querySelector('.message').innerHTML =  `<h2>${message}</h2>`;
+    
 });
