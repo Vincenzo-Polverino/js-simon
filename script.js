@@ -29,3 +29,23 @@ function countdown() {
 }
 
 const clock = setInterval(countdown, 1000); 
+
+
+checkEl.addEventListener('click', function() {
+    let user_numbers = [];
+    for (let i = 0; i < inputEl.length; i++) {
+        user_numbers.push(parseInt(inputEl[i].value));
+    }
+
+    let correct_numbers = [];
+    for (let i = 0; i < numbers.length; i++) {
+        if (numbers[i] === user_numbers[i]) {
+            correct_numbers.push(numbers[i]);
+        }
+    }
+
+    let message = `Hai indovinato ${correct_numbers.length} numeri: ${correct_numbers.join(', ')}.`;
+   
+
+    document.querySelector('.message').innerHTML =  `<h2>${message}</h2>`;
+});
