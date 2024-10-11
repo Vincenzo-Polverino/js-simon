@@ -14,7 +14,7 @@ for (let i = 0; i < 5; i++) {
 
 numberEl.innerHTML = `<h1>${numbers.join(' - ')}</h1>`;
 
-let time_left = 3;
+let time_left = 30;
 timerEl.innerHTML = `<h1>${time_left}</h1>`;
 
 function countdown() {
