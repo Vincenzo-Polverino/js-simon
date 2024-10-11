@@ -31,7 +31,8 @@ function countdown() {
 const clock = setInterval(countdown, 1000); 
 
 
-checkEl.addEventListener('click', function() {
+checkEl.addEventListener('click', function(e) {
+    e.preventDefault()
     let user_numbers = [];
     for (let i = 0; i < inputEl.length; i++) {
         user_numbers.push(parseInt(inputEl[i].value));
