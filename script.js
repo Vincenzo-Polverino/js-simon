@@ -9,12 +9,12 @@ const checkEl = document.querySelector('.btn')
 
 let numbers = [];
 for (let i = 0; i < 5; i++) {
-    numbers.push(Math.floor((Math.random() * 5) + 1));
+    numbers.push(Math.floor((Math.random() * 100) + 1));
 }
 
 numberEl.innerHTML = `<h1>${numbers.join(' - ')}</h1>`;
 
-let time_left = 30;
+let time_left = 3;
 timerEl.innerHTML = `<h1>${time_left}</h1>`;
 
 function countdown() {
@@ -39,7 +39,7 @@ checkEl.addEventListener('click', function() {
 
     let correct_numbers = [];
     for (let i = 0; i < numbers.length; i++) {
-        if (numbers[i] === user_numbers[i]) {
+        if (user_numbers.includes(numbers[i])) {
             correct_numbers.push(numbers[i]);
         }
     }
